@@ -7357,6 +7357,37 @@
         "inherits": ["AMA3B1KK"],
         "components_add": ["lis2dh12", "hm01b0"]
     },
+	"NU32": {
+		"inherits": [
+			"MCU_STM32F4"
+		],
+		"overrides": {
+			"clock_source": "USE_PLL_HSE_XTAL"
+		},
+		"config": {
+			"usb_speed": {
+				"help": "USE_USB_OTG_FS or USE_USB_OTG_HS or USE_USB_HS_IN_FS",
+				"value": "USE_USB_OTG_FS"
+			}
+		},
+		"device_has_add": [
+			"USBDEVICE"
+		],
+		"supported_form_factors": [
+			"ARDUINO",
+			"MORPHO"
+		],
+		"extra_labels_add": [
+			"STM32F401xE"
+		],
+		"macros_add": [
+			"STM32F401xE"
+		],
+		"detect_code": [
+			"1234"
+		],
+		"device_name": "STM32F401RE"
+	},
     "__build_tools_metadata__": {
         "version": "1",
         "public": false
